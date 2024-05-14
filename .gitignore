@@ -28,3 +28,6 @@ replay_pid*
 *.ipr
 *.iws
 .idea/
+
+#ignore target folder
+target/

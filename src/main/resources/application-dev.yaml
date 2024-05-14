@@ -1,13 +1,13 @@
 spring:
   data:
     mongodb:
-      auto-index-creation: true
-      authentication-database: admin
       username: root
       password: rootpassword
       database: spring_login
       port: 27017
       host: localhost
+      auto-index-creation: true
+      authentication-database: admin
 # The configuration for the OAuth2 client
 app:
   tokenSecret: 926D96C90030DD58429D2751AC1BDBBC

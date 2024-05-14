@@ -28,9 +28,9 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
 
     @Override
     public OAuth2User loadUser(OAuth2UserRequest userOAuth2Request) throws OAuth2AuthenticationException {
-
+        OAuth2User oAuth2User = super.loadUser(userOAuth2Request);
         try {
-            return processOAuth2User(userOAuth2Request, super.loadUser(userOAuth2Request));
+            return processOAuth2User(userOAuth2Request, oAuth2User);
         } catch (AuthenticationException ex) {
             throw new OAuth2AuthenticationProcessingException(ex.getMessage());
         } catch (Exception ex) {
